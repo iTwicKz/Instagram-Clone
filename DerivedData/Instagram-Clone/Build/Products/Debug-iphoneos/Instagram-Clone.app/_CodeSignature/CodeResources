@@ -58,6 +58,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
+		<data>
+		GogvH31hhYIYlpBaGAJB3Ww1bEQ=
+		</data>
+		<key>Frameworks/AFNetworking.framework/Info.plist</key>
+		<data>
+		Huw3DEBumWMWk3/jNn+RPYaj28I=
+		</data>
+		<key>Frameworks/AFNetworking.framework/_CodeSignature/CodeResources</key>
+		<data>
+		l9TKF9vd60fxBvJpCJMgKWky6xA=
+		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
 		UWhn7ThYusg2BGAkYgKFVwzHUes=
@@ -163,6 +175,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
+		<data>
+		GogvH31hhYIYlpBaGAJB3Ww1bEQ=
+		</data>
+		<key>Frameworks/AFNetworking.framework/Info.plist</key>
+		<data>
+		Huw3DEBumWMWk3/jNn+RPYaj28I=
+		</data>
+		<key>Frameworks/AFNetworking.framework/_CodeSignature/CodeResources</key>
+		<data>
+		l9TKF9vd60fxBvJpCJMgKWky6xA=
+		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
 		UWhn7ThYusg2BGAkYgKFVwzHUes=

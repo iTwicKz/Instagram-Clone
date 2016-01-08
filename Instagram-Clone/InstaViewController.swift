@@ -78,6 +78,23 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             let imageUrl = NSURL(string: urlString)
             cell.instaImageView.setImageWithURL(imageUrl!)
+            
+            
+            let userUrl = pic["user"]!["profile_picture"] as! String
+            
+            let userImageUrl = NSURL(string: userUrl)
+            cell.userImage.setImageWithURL(userImageUrl!)
+            
+            var likesCountNum = pic["likes"]!["count"] as! NSNumber
+            let likesCount = "\(likesCountNum) likes"
+            cell.likesLabel.text = likesCount
+            
+            let descriptionText = pic["caption"]!["text"] as! String?
+            
+            if descriptionText != nil {
+                cell.descriptLabel.text = descriptionText
+
+            }
 
         }
         

@@ -10,9 +10,11 @@ import UIKit
 
 class InstaCell: UITableViewCell {
 
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
-    
     @IBOutlet weak var instaImageView: UIImageView!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var descriptLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -6,34 +6,35 @@ provides-nominal:
 provides-member:
 - ["C15Instagram_Clone19InstaViewController", ""]
 provides-dynamic-lookup:
-- "pictures"
 - "didReceiveMemoryWarning"
 - "viewDidLoad"
 - "tableView"
 - "tableView"
 - "tableView"
+- "pictures"
 depends-top-level:
-- "UITableViewDelegate"
-- !private "print"
-- "UITableViewDataSource"
-- !private "NSURLRequest"
-- !private "NSURL"
-- !private "NSOperationQueue"
-- "Array"
-- "UITableViewCell"
-- "NSIndexPath"
-- !private "StringLiteralType"
-- !private "NSURLSession"
-- "Int"
-- !private "NSJSONSerialization"
-- "UITableView"
-- !private "String"
-- !private "NSURLSessionDataTask"
-- !private "NSURLSessionConfiguration"
 - "UIViewController"
-- "NSDictionary"
+- "Int"
+- "UITableViewDelegate"
+- !private "NSURLRequest"
+- "UITableViewDataSource"
+- !private "NSURL"
+- !private "InstaCell"
+- "Array"
+- !private "String"
+- "UITableViewCell"
 - "InstaViewController"
+- !private "NSJSONSerialization"
+- !private "NSOperationQueue"
+- !private "print"
+- !private "StringLiteralType"
+- "NSIndexPath"
+- "NSDictionary"
+- !private "NSURLSessionConfiguration"
+- !private "NSURLSessionDataTask"
 - !private "!="
+- "UITableView"
+- !private "NSURLSession"
 depends-member:
 - !private ["PSs9AnyObject", "JSONObjectWithData"]
 - !private ["PSs9AnyObject", "NSJSONSerialization"]
@@ -73,7 +74,7 @@ depends-member:
 - !private ["PSs9AnyObject", "subscript"]
 - ["PSs9AnyObject", "tableView"]
 - !private ["PSs9AnyObject", "text"]
-- !private ["PSs9AnyObject", "textLabel"]
+- !private ["PSs9AnyObject", "userLabel"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", "viewForZoomingInScrollView"]
 - ["PSs9AnyObject", ""]
@@ -129,7 +130,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "subscript"]
 - ["PSs11CVarArgType", "tableView"]
 - !private ["PSs11CVarArgType", "text"]
-- !private ["PSs11CVarArgType", "textLabel"]
+- !private ["PSs11CVarArgType", "userLabel"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", "viewForZoomingInScrollView"]
 - ["PSs11CVarArgType", ""]
@@ -188,7 +189,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - ["PSs23CustomStringConvertible", "tableView"]
 - !private ["PSs23CustomStringConvertible", "text"]
-- !private ["PSs23CustomStringConvertible", "textLabel"]
+- !private ["PSs23CustomStringConvertible", "userLabel"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["PSs23CustomStringConvertible", ""]
@@ -234,7 +235,7 @@ depends-member:
 - !private ["PSs9Equatable", "subscript"]
 - ["PSs9Equatable", "tableView"]
 - !private ["PSs9Equatable", "text"]
-- !private ["PSs9Equatable", "textLabel"]
+- !private ["PSs9Equatable", "userLabel"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", "viewForZoomingInScrollView"]
 - ["PSs9Equatable", ""]
@@ -280,7 +281,7 @@ depends-member:
 - !private ["PSs8Hashable", "subscript"]
 - ["PSs8Hashable", "tableView"]
 - !private ["PSs8Hashable", "text"]
-- !private ["PSs8Hashable", "textLabel"]
+- !private ["PSs8Hashable", "userLabel"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", "viewForZoomingInScrollView"]
 - ["PSs8Hashable", ""]
@@ -291,6 +292,8 @@ depends-member:
 - !private ["PSs9Indexable", "_Element"]
 - !private ["PSs9Indexable", "subscript"]
 - !private ["VSs17IndexingGenerator", "Element"]
+- !private ["C15Instagram_Clone9InstaCell", "userLabel"]
+- !private ["C15Instagram_Clone19InstaViewController", "InstaCell"]
 - ["C15Instagram_Clone19InstaViewController", "Int"]
 - ["C15Instagram_Clone19InstaViewController", "NSDictionary"]
 - ["C15Instagram_Clone19InstaViewController", "NSIndexPath"]
@@ -378,7 +381,7 @@ depends-member:
 - !private ["PSo8NSCoding", "subscript"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "text"]
-- !private ["PSo8NSCoding", "textLabel"]
+- !private ["PSo8NSCoding", "userLabel"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", ""]
@@ -424,6 +427,7 @@ depends-member:
 - !private ["CSo19NSJSONSerialization", "JSONObjectWithData"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "subscript"]
+- !private ["CSo8NSObject", "InstaCell"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "JSONObjectWithData"]
 - ["CSo8NSObject", "NSDictionary"]
@@ -469,7 +473,7 @@ depends-member:
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
-- !private ["CSo8NSObject", "textLabel"]
+- !private ["CSo8NSObject", "userLabel"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - !private ["PSo16NSObjectProtocol", "JSONObjectWithData"]
@@ -510,7 +514,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
-- !private ["PSo16NSObjectProtocol", "textLabel"]
+- !private ["PSo16NSObjectProtocol", "userLabel"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", ""]
@@ -558,13 +562,13 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
-- !private ["PSo29UIAccessibilityIdentification", "textLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "userLabel"]
 - !private ["PSo12UIAppearance", "dataSource"]
 - !private ["PSo12UIAppearance", "delegate"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo12UIAppearance", "text"]
-- !private ["PSo12UIAppearance", "textLabel"]
+- !private ["PSo12UIAppearance", "userLabel"]
 - !private ["PSo21UIAppearanceContainer", "NSJSONSerialization"]
 - !private ["PSo21UIAppearanceContainer", "NSOperationQueue"]
 - !private ["PSo21UIAppearanceContainer", "NSURL"]
@@ -596,7 +600,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "sectionIndexTitlesForTableView"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
-- !private ["PSo21UIAppearanceContainer", "textLabel"]
+- !private ["PSo21UIAppearanceContainer", "userLabel"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewForZoomingInScrollView"]
 - ["PSo21UIAppearanceContainer", ""]
@@ -634,13 +638,13 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo17UICoordinateSpace", "text"]
-- !private ["PSo17UICoordinateSpace", "textLabel"]
+- !private ["PSo17UICoordinateSpace", "userLabel"]
 - !private ["PSo13UIDynamicItem", "dataSource"]
 - !private ["PSo13UIDynamicItem", "delegate"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo13UIDynamicItem", "text"]
-- !private ["PSo13UIDynamicItem", "textLabel"]
+- !private ["PSo13UIDynamicItem", "userLabel"]
 - !private ["PSo18UIFocusEnvironment", "NSJSONSerialization"]
 - !private ["PSo18UIFocusEnvironment", "NSOperationQueue"]
 - !private ["PSo18UIFocusEnvironment", "NSURL"]
@@ -672,12 +676,13 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "sectionIndexTitlesForTableView"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
-- !private ["PSo18UIFocusEnvironment", "textLabel"]
+- !private ["PSo18UIFocusEnvironment", "userLabel"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewForZoomingInScrollView"]
 - ["PSo18UIFocusEnvironment", ""]
-- !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
+- !private ["PSo27UIGestureRecognizerDelegate", "userLabel"]
 - !private ["CSo7UILabel", "text"]
+- !private ["CSo11UIResponder", "InstaCell"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSDictionary"]
 - ["CSo11UIResponder", "NSIndexPath"]
@@ -716,7 +721,7 @@ depends-member:
 - ["CSo11UIResponder", "sectionIndexTitlesForTableView"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
-- !private ["CSo11UIResponder", "textLabel"]
+- !private ["CSo11UIResponder", "userLabel"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
 - !private ["CSo12UIScrollView", "dataSource"]
@@ -782,7 +787,8 @@ depends-member:
 - !private ["CSo11UITableView", "delegate"]
 - !private ["CSo11UITableView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo11UITableView", "reloadData"]
-- !private ["CSo15UITableViewCell", "textLabel"]
+- !private ["CSo15UITableViewCell", "deinit"]
+- !private ["CSo15UITableViewCell", "userLabel"]
 - !private ["PSo21UITableViewDataSource", "NSJSONSerialization"]
 - !private ["PSo21UITableViewDataSource", "NSOperationQueue"]
 - !private ["PSo21UITableViewDataSource", "NSURL"]
@@ -866,7 +872,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "sectionIndexTitlesForTableView"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
-- !private ["PSo18UITraitEnvironment", "textLabel"]
+- !private ["PSo18UITraitEnvironment", "userLabel"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewForZoomingInScrollView"]
 - ["PSo18UITraitEnvironment", ""]
@@ -875,7 +881,8 @@ depends-member:
 - !private ["CSo6UIView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo6UIView", "reloadData"]
 - !private ["CSo6UIView", "text"]
-- !private ["CSo6UIView", "textLabel"]
+- !private ["CSo6UIView", "userLabel"]
+- !private ["CSo16UIViewController", "InstaCell"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSDictionary"]
 - ["CSo16UIViewController", "NSIndexPath"]
@@ -952,7 +959,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "reloadData"]
 - !private ["PSs12_Reflectable", "subscript"]
 - !private ["PSs12_Reflectable", "text"]
-- !private ["PSs12_Reflectable", "textLabel"]
+- !private ["PSs12_Reflectable", "userLabel"]
 depends-nominal:
 - "PSs9AnyObject"
 - !private "Sa"
@@ -976,6 +983,7 @@ depends-nominal:
 - !private "SQ"
 - !private "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
+- !private "C15Instagram_Clone9InstaCell"
 - "C15Instagram_Clone19InstaViewController"
 - !private "Si"
 - !private "VSs5Int16"
@@ -1068,4 +1076,26 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
-interface-hash: "4304449fbbf90722fe4f9b2f6015aa1b"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIAlertView+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLSessionManager.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFHTTPRequestOperationManager.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFHTTPRequestOperation.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLConnectionOperation.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFSecurityPolicy.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
+- "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Modules/module.modulemap"
+interface-hash: "a2a309c7c216b5c42ae1dce020057a67"

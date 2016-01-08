@@ -107,12 +107,22 @@ SWIFT_CLASS("_TtC15Instagram_Clone11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC15Instagram_Clone9InstaCell")
+@interface InstaCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified userLabel;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSDictionary;
 @class UITableView;
 @class NSIndexPath;
-@class UITableViewCell;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC15Instagram_Clone19InstaViewController")
 @interface InstaViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>

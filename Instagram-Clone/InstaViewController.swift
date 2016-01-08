@@ -59,11 +59,16 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("InstaCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("InstaCell", forIndexPath: indexPath) as! InstaCell
     
         if(pictures != nil){
             let pic = pictures![indexPath.row]
             print("Ahhhhh darn")
+            
+            let user = pic["user"]!["username"] as! String
+            print("User \(user)")
+            
+            cell.userLabel.text = user
             
             let filterString = pic["filter"] as! String
             print(filterString)
@@ -81,8 +86,8 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
 //        let user = picture["user"]!["username"] as! String
-        
-        cell.textLabel!.text = "row \(indexPath.row)"
+//        
+//        cell.textLabel!.text = "row \(indexPath.row)"
 
         
         print("row \(indexPath.row)")

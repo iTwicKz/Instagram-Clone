@@ -75,6 +75,9 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             let urlString = pic["images"]!["standard_resolution"]!!["url"] as! String
             print(urlString)
+            
+            let imageUrl = NSURL(string: urlString)
+            cell.instaImageView.setImageWithURL(imageUrl!)
 
         }
         

@@ -125,6 +125,7 @@ SWIFT_CLASS("_TtC15Instagram_Clone9InstaCell")
 @end
 
 @class NSDictionary;
+@class UIRefreshControl;
 @class UITableView;
 @class NSIndexPath;
 @class UIStoryboardSegue;
@@ -134,7 +135,11 @@ SWIFT_CLASS("_TtC15Instagram_Clone19InstaViewController")
 @interface InstaViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UITableView * __null_unspecified tableView;
 @property (nonatomic, copy) NSArray<NSDictionary *> * __nullable pictures;
+@property (nonatomic, strong) UIRefreshControl * __null_unspecified refreshControl;
 - (void)viewDidLoad;
+- (void)networkRequest;
+- (void)delay:(double)delay closure:(void (^ __nonnull)(void))closure;
+- (void)onRefresh;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;

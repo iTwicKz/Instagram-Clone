@@ -14,12 +14,31 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     var pictures: [NSDictionary]?
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        self.networkRequest();
+
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+
+        
+
+        
+ 
+        
+
+        // Do any additional setup after loading the view.
+    }
+    
+    func networkRequest () {
         
         
         let clientId = "e05c462ebd86446ea48a5af73769b602"
@@ -36,7 +55,7 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
                 if let data = dataOrNil {
                     if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
                         data, options:[]) as? NSDictionary {
-//                            NSLog("response: \(responseDictionary)")
+                            //                            NSLog("response: \(responseDictionary)")
                             
                             self.pictures = responseDictionary["data"] as! [NSDictionary]
                             self.tableView.reloadData()
@@ -44,8 +63,24 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
         });
         task.resume()
-
-        // Do any additional setup after loading the view.
+    
+    }
+    
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    func onRefresh() {
+        delay(2, closure: {
+            self.refreshControl.endRefreshing()
+            self.networkRequest()
+        })
     }
 
     override func didReceiveMemoryWarning() {

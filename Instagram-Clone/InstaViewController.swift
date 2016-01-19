@@ -9,12 +9,14 @@
 import AFNetworking
 import UIKit
 
-class InstaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InstaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     var pictures: [NSDictionary]?
     var refreshControl: UIRefreshControl!
+    var isMoreDataLoading = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,6 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
         refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
 
-        
-
-        
- 
-        
-
-        // Do any additional setup after loading the view.
     }
     
     func networkRequest () {
@@ -76,12 +71,43 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
             dispatch_get_main_queue(), closure)
     }
     
+    
+    //MARK: Refresh Functions
     func onRefresh() {
         delay(2, closure: {
             self.refreshControl.endRefreshing()
             self.networkRequest()
         })
     }
+    
+    
+    //MARK: Infinite Scroll
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if (!isMoreDataLoading) {
+            
+            
+            let scrollViewContentHeight = tableView.contentSize.height
+            let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+            
+            // When the user has scrolled past the threshold, start requesting
+            
+            if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.dragging) {
+                isMoreDataLoading = true
+            
+                self.isMoreDataLoading = false
+                
+                // Update data source with latest data
+                self.networkRequest()
+                self.tableView.reloadData()
+                
+            }
+            
+        }
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,12 +129,7 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(pictures != nil){
             let pic = pictures![indexPath.row]
             print("Ahhhhh darn")
-            
-            let user = pic["user"]!["username"] as! String
-            print("User \(user)")
-            
-            cell.userLabel.text = user
-            
+
             let filterString = pic["filter"] as! String
             print(filterString)
             
@@ -128,10 +149,9 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
             let likesCount = "\(likesCountNum) likes"
             cell.likesLabel.text = likesCount
             
-            let descriptionText = pic["caption"]!["text"] as! String?
-            
-            if descriptionText != nil {
-                cell.descriptLabel.text = descriptionText
+            if let descriptionText = pic["caption"]!["text"] {
+                let descriptionString = pic["caption"]!["text"] as! String?
+                cell.descriptLabel.text = descriptionString
 
             }
 

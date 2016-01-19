@@ -12,34 +12,36 @@ provides-dynamic-lookup:
 - "tableView"
 - "tableView"
 - "tableView"
+- "tableView"
 - "prepareForSegue"
 depends-top-level:
-- !private "StringLiteralType"
-- "UITableViewCell"
-- !private "NSOperationQueue"
-- "NSDictionary"
-- "InstaViewController"
-- !private "InstaCell"
+- !private "NSURL"
 - "UITableView"
-- "Int"
 - "UITableViewDataSource"
-- !private "NSURLSessionConfiguration"
-- !private "NSURLSessionDataTask"
-- "Array"
+- "NSDictionary"
 - "UIStoryboardSegue"
-- !private "PhotosDetailsViewController"
-- "UIViewController"
-- "NSIndexPath"
+- "Int"
 - !private "NSURLRequest"
+- "UIViewController"
+- !private "BooleanLiteralType"
+- "InstaViewController"
+- !private "NSNumber"
+- !private "NSURLSessionDataTask"
+- !private "NSJSONSerialization"
+- !private "NSURLSessionConfiguration"
+- !private "!="
+- "NSIndexPath"
+- "AnyObject"
+- !private "PhotosDetailsViewController"
+- !private "NSURLSession"
+- !private "String"
+- "Array"
 - !private "print"
 - "UITableViewDelegate"
-- !private "NSJSONSerialization"
-- !private "NSURLSession"
-- !private "!="
-- "AnyObject"
-- !private "NSNumber"
-- !private "String"
-- !private "NSURL"
+- "UITableViewCell"
+- !private "NSOperationQueue"
+- !private "StringLiteralType"
+- !private "InstaCell"
 depends-member:
 - !private ["PSs9AnyObject", "JSONObjectWithData"]
 - !private ["PSs9AnyObject", "NSJSONSerialization"]
@@ -54,6 +56,7 @@ depends-member:
 - !private ["PSs9AnyObject", "delegate"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs9AnyObject", "descriptLabel"]
+- !private ["PSs9AnyObject", "deselectRowAtIndexPath"]
 - !private ["PSs9AnyObject", "destinationViewController"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - !private ["PSs9AnyObject", "indexPathForCell"]
@@ -129,6 +132,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "delegate"]
 - !private ["PSs11CVarArgType", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs11CVarArgType", "descriptLabel"]
+- !private ["PSs11CVarArgType", "deselectRowAtIndexPath"]
 - !private ["PSs11CVarArgType", "destinationViewController"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "indexPathForCell"]
@@ -204,6 +208,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "delegate"]
 - !private ["PSs23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs23CustomStringConvertible", "descriptLabel"]
+- !private ["PSs23CustomStringConvertible", "deselectRowAtIndexPath"]
 - !private ["PSs23CustomStringConvertible", "destinationViewController"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["PSs23CustomStringConvertible", "indexPathForCell"]
@@ -261,6 +266,7 @@ depends-member:
 - !private ["PSs9Equatable", "delegate"]
 - !private ["PSs9Equatable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs9Equatable", "descriptLabel"]
+- !private ["PSs9Equatable", "deselectRowAtIndexPath"]
 - !private ["PSs9Equatable", "destinationViewController"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "indexPathForCell"]
@@ -320,6 +326,7 @@ depends-member:
 - !private ["PSs8Hashable", "delegate"]
 - !private ["PSs8Hashable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs8Hashable", "descriptLabel"]
+- !private ["PSs8Hashable", "deselectRowAtIndexPath"]
 - !private ["PSs8Hashable", "destinationViewController"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "indexPathForCell"]
@@ -454,6 +461,7 @@ depends-member:
 - !private ["PSo8NSCoding", "delegate"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo8NSCoding", "descriptLabel"]
+- !private ["PSo8NSCoding", "deselectRowAtIndexPath"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "indexPathForCell"]
 - ["PSo8NSCoding", "indexPathForPreferredFocusedViewInTableView"]
@@ -558,6 +566,7 @@ depends-member:
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo8NSObject", "descriptLabel"]
+- !private ["CSo8NSObject", "deselectRowAtIndexPath"]
 - !private ["CSo8NSObject", "destinationViewController"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "indexPathForCell"]
@@ -608,6 +617,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo16NSObjectProtocol", "descriptLabel"]
+- !private ["PSo16NSObjectProtocol", "deselectRowAtIndexPath"]
 - !private ["PSo16NSObjectProtocol", "destinationViewController"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "indexPathForCell"]
@@ -700,6 +710,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "descriptLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "deselectRowAtIndexPath"]
 - !private ["PSo29UIAccessibilityIdentification", "indexPathForCell"]
 - !private ["PSo29UIAccessibilityIdentification", "instaImageView"]
 - !private ["PSo29UIAccessibilityIdentification", "likesLabel"]
@@ -712,6 +723,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "delegate"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo12UIAppearance", "descriptLabel"]
+- !private ["PSo12UIAppearance", "deselectRowAtIndexPath"]
 - !private ["PSo12UIAppearance", "indexPathForCell"]
 - !private ["PSo12UIAppearance", "instaImageView"]
 - !private ["PSo12UIAppearance", "likesLabel"]
@@ -730,6 +742,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "descriptLabel"]
+- !private ["PSo21UIAppearanceContainer", "deselectRowAtIndexPath"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "indexPathForCell"]
 - ["PSo21UIAppearanceContainer", "indexPathForPreferredFocusedViewInTableView"]
@@ -798,6 +811,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "delegate"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo17UICoordinateSpace", "descriptLabel"]
+- !private ["PSo17UICoordinateSpace", "deselectRowAtIndexPath"]
 - !private ["PSo17UICoordinateSpace", "indexPathForCell"]
 - !private ["PSo17UICoordinateSpace", "instaImageView"]
 - !private ["PSo17UICoordinateSpace", "likesLabel"]
@@ -810,6 +824,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "delegate"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo13UIDynamicItem", "descriptLabel"]
+- !private ["PSo13UIDynamicItem", "deselectRowAtIndexPath"]
 - !private ["PSo13UIDynamicItem", "indexPathForCell"]
 - !private ["PSo13UIDynamicItem", "instaImageView"]
 - !private ["PSo13UIDynamicItem", "likesLabel"]
@@ -828,6 +843,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "descriptLabel"]
+- !private ["PSo18UIFocusEnvironment", "deselectRowAtIndexPath"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "indexPathForCell"]
 - ["PSo18UIFocusEnvironment", "indexPathForPreferredFocusedViewInTableView"]
@@ -890,6 +906,7 @@ depends-member:
 - !private ["CSo11UIResponder", "delegate"]
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo11UIResponder", "descriptLabel"]
+- !private ["CSo11UIResponder", "deselectRowAtIndexPath"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "indexPathForCell"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedViewInTableView"]
@@ -925,6 +942,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "dataSource"]
 - !private ["CSo12UIScrollView", "delegate"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo12UIScrollView", "deselectRowAtIndexPath"]
 - !private ["CSo12UIScrollView", "indexPathForCell"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["PSo20UIScrollViewDelegate", "NSJSONSerialization"]
@@ -988,6 +1006,7 @@ depends-member:
 - !private ["CSo11UITableView", "dataSource"]
 - !private ["CSo11UITableView", "delegate"]
 - !private ["CSo11UITableView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo11UITableView", "deselectRowAtIndexPath"]
 - !private ["CSo11UITableView", "indexPathForCell"]
 - !private ["CSo11UITableView", "reloadData"]
 - !private ["CSo15UITableViewCell", "deinit"]
@@ -1058,6 +1077,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo18UITraitEnvironment", "descriptLabel"]
+- !private ["PSo18UITraitEnvironment", "deselectRowAtIndexPath"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "indexPathForCell"]
 - ["PSo18UITraitEnvironment", "indexPathForPreferredFocusedViewInTableView"]
@@ -1095,6 +1115,7 @@ depends-member:
 - !private ["CSo6UIView", "delegate"]
 - !private ["CSo6UIView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo6UIView", "descriptLabel"]
+- !private ["CSo6UIView", "deselectRowAtIndexPath"]
 - !private ["CSo6UIView", "indexPathForCell"]
 - !private ["CSo6UIView", "instaImageView"]
 - !private ["CSo6UIView", "likesLabel"]
@@ -1203,6 +1224,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "delegate"]
 - !private ["PSs12_Reflectable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs12_Reflectable", "descriptLabel"]
+- !private ["PSs12_Reflectable", "deselectRowAtIndexPath"]
 - !private ["PSs12_Reflectable", "indexPathForCell"]
 - !private ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "instaImageView"]
@@ -1377,4 +1399,4 @@ depends-external:
 - "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "06ca5d87d6578a748fff10d5cafca19d"
+interface-hash: "3e0e737612ed6902c05a78061aa64932"

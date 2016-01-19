@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C15Instagram_Clone9InstaCell", ""]
 provides-dynamic-lookup:
-- "likesLabel"
-- "setSelected"
-- "awakeFromNib"
-- "userImage"
 - "instaImageView"
 - "userLabel"
 - "descriptLabel"
+- "likesLabel"
+- "awakeFromNib"
+- "setSelected"
+- "userImage"
 depends-top-level:
-- "UILabel"
 - "Bool"
-- "UIImageView"
 - "UITableViewCell"
+- "UILabel"
 - "InstaCell"
+- "UIImageView"
 depends-member:
 - ["PSs9AnyObject", "awakeFromNib"]
 - ["PSs9AnyObject", "descriptLabel"]

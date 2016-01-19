@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "9a49b92affd26612d1cc70ba7fafab21"
+build_time: [506480436, 79575000]
+inputs:
+  "/Users/Takashi/Documents/Instagram-Clone/Instagram-Clone/InstaCell.swift": [505546056, 0]
+  "/Users/Takashi/Documents/Instagram-Clone/Instagram-Clone/InstaViewController.swift": [505546645, 0]
+  "/Users/Takashi/Documents/Instagram-Clone/Instagram-Clone/AppDelegate.swift": [505535440, 0]
+  "/Users/Takashi/Documents/Instagram-Clone/Instagram-Clone/ViewController.swift": [505535440, 0]

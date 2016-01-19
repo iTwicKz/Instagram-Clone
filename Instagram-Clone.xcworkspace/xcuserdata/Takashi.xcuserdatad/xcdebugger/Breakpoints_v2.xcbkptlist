@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Instagram-Clone/PhotosDetailsViewController.swift"
+            timestampString = "474859657.906221"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "PhotosDetailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Clone.PhotosDetailsViewController.init (Instagram_Clone.PhotosDetailsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Instagram_Clone.PhotosDetailsViewController"
+                  moduleName = "Instagram-Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Takashi/Documents/Instagram-Clone/Instagram-Clone/PhotosDetailsViewController.swift"
+                  timestampString = "474859579.732132"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Clone.PhotosDetailsViewController.init (Instagram_Clone.PhotosDetailsViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Instagram_Clone.PhotosDetailsViewController&gt;"
+                  moduleName = "Instagram-Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Takashi/Documents/Instagram-Clone/Instagram-Clone/PhotosDetailsViewController.swift"
+                  timestampString = "474859579.733798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

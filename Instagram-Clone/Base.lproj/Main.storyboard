@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8bN-h2-tnx">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="595" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Aby-CI-0vU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstaCell" rowHeight="595" id="xeS-qJ-vaK" customClass="InstaCell" customModule="Instagram_Clone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="595"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="595"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeS-qJ-vaK" id="io2-jg-9gZ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="594.5"/>
@@ -32,35 +31,29 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2J-7b-ApK">
                                                     <rect key="frame" x="73" y="0.0" width="247" height="46"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hv7-3b-vhL">
                                                     <rect key="frame" x="0.0" y="50" width="600" height="376"/>
-                                                    <animations/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-Kk-3Xo">
                                                     <rect key="frame" x="8" y="1" width="45" height="45"/>
-                                                    <animations/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDD-z8-XTK">
                                                     <rect key="frame" x="16" y="465" width="569" height="121.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0L-FA-CHV">
                                                     <rect key="frame" x="16" y="434" width="304" height="39.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="n0L-FA-CHV" firstAttribute="leading" secondItem="io2-jg-9gZ" secondAttribute="leadingMargin" constant="8" id="Coy-mO-4ya"/>
                                                 <constraint firstItem="CDD-z8-XTK" firstAttribute="leading" secondItem="io2-jg-9gZ" secondAttribute="leadingMargin" constant="8" id="NJe-Y7-bkT"/>
@@ -69,19 +62,18 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Hv7-3b-vhL" secondAttribute="trailing" constant="-8" id="qtg-XX-dOP"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <outlet property="descriptLabel" destination="CDD-z8-XTK" id="vWa-B3-b4T"/>
                                             <outlet property="instaImageView" destination="Hv7-3b-vhL" id="q3w-Hk-bA6"/>
                                             <outlet property="likesLabel" destination="n0L-FA-CHV" id="d4U-2P-vwo"/>
                                             <outlet property="userImage" destination="Wwm-Kk-3Xo" id="IUz-At-nlN"/>
                                             <outlet property="userLabel" destination="z2J-7b-ApK" id="c78-Y4-8pH"/>
+                                            <segue destination="3OJ-xi-dVo" kind="show" id="RwA-lj-y1F"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QLh-Lr-t6e" firstAttribute="top" secondItem="Aby-CI-0vU" secondAttribute="bottom" id="6cI-bA-hii"/>
@@ -89,11 +81,56 @@
                             <constraint firstItem="Aby-CI-0vU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="keA-vx-5nf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="m3F-Gz-RZ9"/>
                     <connections>
                         <outlet property="tableView" destination="Aby-CI-0vU" id="ttX-0O-x2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="323"/>
+        </scene>
+        <!--Photos Details View Controller-->
+        <scene sceneID="WT9-BY-oot">
+            <objects>
+                <viewController id="3OJ-xi-dVo" customClass="PhotosDetailsViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94G-cQ-jvn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pxv-HW-YTd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NQs-fI-Rze">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPi-Q3-6gu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="352"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailedPhoto" destination="EPi-Q3-6gu" id="Xpy-cE-CLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tT6-0P-gvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="313"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KiO-Ha-rVR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8bN-h2-tnx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2u0-Tb-DBD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eOr-yf-ETW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12q-cv-etN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="313"/>
         </scene>

@@ -6,36 +6,40 @@ provides-nominal:
 provides-member:
 - ["C15Instagram_Clone19InstaViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
 - "pictures"
+- "didReceiveMemoryWarning"
 - "tableView"
 - "tableView"
 - "tableView"
+- "prepareForSegue"
 depends-top-level:
-- "UIViewController"
-- !private "NSURL"
-- "UITableViewDelegate"
-- "Int"
-- "UITableView"
-- !private "print"
-- !private "InstaCell"
-- !private "NSNumber"
-- !private "NSOperationQueue"
-- "UITableViewDataSource"
-- !private "String"
-- "NSIndexPath"
-- !private "!="
 - !private "StringLiteralType"
-- "InstaViewController"
-- !private "NSURLSession"
-- !private "NSURLSessionConfiguration"
-- "Array"
-- !private "NSJSONSerialization"
-- "NSDictionary"
-- !private "NSURLSessionDataTask"
 - "UITableViewCell"
+- !private "NSOperationQueue"
+- "NSDictionary"
+- "InstaViewController"
+- !private "InstaCell"
+- "UITableView"
+- "Int"
+- "UITableViewDataSource"
+- !private "NSURLSessionConfiguration"
+- !private "NSURLSessionDataTask"
+- "Array"
+- "UIStoryboardSegue"
+- !private "PhotosDetailsViewController"
+- "UIViewController"
+- "NSIndexPath"
 - !private "NSURLRequest"
+- !private "print"
+- "UITableViewDelegate"
+- !private "NSJSONSerialization"
+- !private "NSURLSession"
+- !private "!="
+- "AnyObject"
+- !private "NSNumber"
+- !private "String"
+- !private "NSURL"
 depends-member:
 - !private ["PSs9AnyObject", "JSONObjectWithData"]
 - !private ["PSs9AnyObject", "NSJSONSerialization"]
@@ -50,14 +54,18 @@ depends-member:
 - !private ["PSs9AnyObject", "delegate"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs9AnyObject", "descriptLabel"]
+- !private ["PSs9AnyObject", "destinationViewController"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- !private ["PSs9AnyObject", "indexPathForCell"]
 - ["PSs9AnyObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSs9AnyObject", "init"]
 - !private ["PSs9AnyObject", "instaImageView"]
 - !private ["PSs9AnyObject", "likesLabel"]
 - !private ["PSs9AnyObject", "mainQueue"]
 - ["PSs9AnyObject", "numberOfSectionsInTableView"]
+- !private ["PSs9AnyObject", "passedPhoto"]
 - ["PSs9AnyObject", "pictures"]
+- ["PSs9AnyObject", "prepareForSegue"]
 - !private ["PSs9AnyObject", "print"]
 - !private ["PSs9AnyObject", "reloadData"]
 - !private ["PSs9AnyObject", "resume"]
@@ -121,14 +129,18 @@ depends-member:
 - !private ["PSs11CVarArgType", "delegate"]
 - !private ["PSs11CVarArgType", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs11CVarArgType", "descriptLabel"]
+- !private ["PSs11CVarArgType", "destinationViewController"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- !private ["PSs11CVarArgType", "indexPathForCell"]
 - ["PSs11CVarArgType", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSs11CVarArgType", "init"]
 - !private ["PSs11CVarArgType", "instaImageView"]
 - !private ["PSs11CVarArgType", "likesLabel"]
 - !private ["PSs11CVarArgType", "mainQueue"]
 - ["PSs11CVarArgType", "numberOfSectionsInTableView"]
+- !private ["PSs11CVarArgType", "passedPhoto"]
 - ["PSs11CVarArgType", "pictures"]
+- ["PSs11CVarArgType", "prepareForSegue"]
 - !private ["PSs11CVarArgType", "print"]
 - !private ["PSs11CVarArgType", "reloadData"]
 - !private ["PSs11CVarArgType", "resume"]
@@ -192,14 +204,18 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "delegate"]
 - !private ["PSs23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs23CustomStringConvertible", "descriptLabel"]
+- !private ["PSs23CustomStringConvertible", "destinationViewController"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["PSs23CustomStringConvertible", "indexPathForCell"]
 - ["PSs23CustomStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSs23CustomStringConvertible", "init"]
 - !private ["PSs23CustomStringConvertible", "instaImageView"]
 - !private ["PSs23CustomStringConvertible", "likesLabel"]
 - !private ["PSs23CustomStringConvertible", "mainQueue"]
 - ["PSs23CustomStringConvertible", "numberOfSectionsInTableView"]
+- !private ["PSs23CustomStringConvertible", "passedPhoto"]
 - ["PSs23CustomStringConvertible", "pictures"]
+- ["PSs23CustomStringConvertible", "prepareForSegue"]
 - !private ["PSs23CustomStringConvertible", "print"]
 - !private ["PSs23CustomStringConvertible", "reloadData"]
 - !private ["PSs23CustomStringConvertible", "resume"]
@@ -245,14 +261,18 @@ depends-member:
 - !private ["PSs9Equatable", "delegate"]
 - !private ["PSs9Equatable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs9Equatable", "descriptLabel"]
+- !private ["PSs9Equatable", "destinationViewController"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
+- !private ["PSs9Equatable", "indexPathForCell"]
 - ["PSs9Equatable", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSs9Equatable", "init"]
 - !private ["PSs9Equatable", "instaImageView"]
 - !private ["PSs9Equatable", "likesLabel"]
 - !private ["PSs9Equatable", "mainQueue"]
 - ["PSs9Equatable", "numberOfSectionsInTableView"]
+- !private ["PSs9Equatable", "passedPhoto"]
 - ["PSs9Equatable", "pictures"]
+- ["PSs9Equatable", "prepareForSegue"]
 - !private ["PSs9Equatable", "print"]
 - !private ["PSs9Equatable", "reloadData"]
 - !private ["PSs9Equatable", "resume"]
@@ -300,14 +320,18 @@ depends-member:
 - !private ["PSs8Hashable", "delegate"]
 - !private ["PSs8Hashable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs8Hashable", "descriptLabel"]
+- !private ["PSs8Hashable", "destinationViewController"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
+- !private ["PSs8Hashable", "indexPathForCell"]
 - ["PSs8Hashable", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSs8Hashable", "init"]
 - !private ["PSs8Hashable", "instaImageView"]
 - !private ["PSs8Hashable", "likesLabel"]
 - !private ["PSs8Hashable", "mainQueue"]
 - ["PSs8Hashable", "numberOfSectionsInTableView"]
+- !private ["PSs8Hashable", "passedPhoto"]
 - ["PSs8Hashable", "pictures"]
+- ["PSs8Hashable", "prepareForSegue"]
 - !private ["PSs8Hashable", "print"]
 - !private ["PSs8Hashable", "reloadData"]
 - !private ["PSs8Hashable", "resume"]
@@ -347,6 +371,7 @@ depends-member:
 - !private ["C15Instagram_Clone9InstaCell", "likesLabel"]
 - !private ["C15Instagram_Clone9InstaCell", "userImage"]
 - !private ["C15Instagram_Clone9InstaCell", "userLabel"]
+- ["C15Instagram_Clone19InstaViewController", "AnyObject"]
 - !private ["C15Instagram_Clone19InstaViewController", "InstaCell"]
 - ["C15Instagram_Clone19InstaViewController", "Int"]
 - ["C15Instagram_Clone19InstaViewController", "NSDictionary"]
@@ -359,7 +384,9 @@ depends-member:
 - !private ["C15Instagram_Clone19InstaViewController", "NSURLSession"]
 - !private ["C15Instagram_Clone19InstaViewController", "NSURLSessionConfiguration"]
 - !private ["C15Instagram_Clone19InstaViewController", "NSURLSessionDataTask"]
+- !private ["C15Instagram_Clone19InstaViewController", "PhotosDetailsViewController"]
 - !private ["C15Instagram_Clone19InstaViewController", "String"]
+- ["C15Instagram_Clone19InstaViewController", "UIStoryboardSegue"]
 - ["C15Instagram_Clone19InstaViewController", "UITableView"]
 - ["C15Instagram_Clone19InstaViewController", "UITableViewCell"]
 - ["C15Instagram_Clone19InstaViewController", "deinit"]
@@ -368,6 +395,7 @@ depends-member:
 - ["C15Instagram_Clone19InstaViewController", "init"]
 - ["C15Instagram_Clone19InstaViewController", "numberOfSectionsInTableView"]
 - ["C15Instagram_Clone19InstaViewController", "pictures"]
+- ["C15Instagram_Clone19InstaViewController", "prepareForSegue"]
 - !private ["C15Instagram_Clone19InstaViewController", "print"]
 - ["C15Instagram_Clone19InstaViewController", "scrollViewDidEndDecelerating"]
 - ["C15Instagram_Clone19InstaViewController", "scrollViewDidEndDragging"]
@@ -427,12 +455,15 @@ depends-member:
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo8NSCoding", "descriptLabel"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "indexPathForCell"]
 - ["PSo8NSCoding", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "instaImageView"]
 - !private ["PSo8NSCoding", "likesLabel"]
 - ["PSo8NSCoding", "numberOfSectionsInTableView"]
+- !private ["PSo8NSCoding", "passedPhoto"]
 - ["PSo8NSCoding", "pictures"]
+- ["PSo8NSCoding", "prepareForSegue"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "reloadData"]
 - !private ["PSo8NSCoding", "row"]
@@ -475,7 +506,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSectionsInTableView"]
+- !private ["PSo26NSExtensionRequestHandling", "passedPhoto"]
 - ["PSo26NSExtensionRequestHandling", "pictures"]
+- ["PSo26NSExtensionRequestHandling", "prepareForSegue"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
@@ -500,6 +533,7 @@ depends-member:
 - !private ["CSo19NSJSONSerialization", "JSONObjectWithData"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "subscript"]
+- ["CSo8NSObject", "AnyObject"]
 - !private ["CSo8NSObject", "InstaCell"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "JSONObjectWithData"]
@@ -513,7 +547,9 @@ depends-member:
 - !private ["CSo8NSObject", "NSURLSession"]
 - !private ["CSo8NSObject", "NSURLSessionConfiguration"]
 - !private ["CSo8NSObject", "NSURLSessionDataTask"]
+- !private ["CSo8NSObject", "PhotosDetailsViewController"]
 - !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
 - !private ["CSo8NSObject", "dataSource"]
@@ -522,14 +558,18 @@ depends-member:
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo8NSObject", "descriptLabel"]
+- !private ["CSo8NSObject", "destinationViewController"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "indexPathForCell"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "instaImageView"]
 - !private ["CSo8NSObject", "likesLabel"]
 - !private ["CSo8NSObject", "mainQueue"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
+- !private ["CSo8NSObject", "passedPhoto"]
 - ["CSo8NSObject", "pictures"]
+- ["CSo8NSObject", "prepareForSegue"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "reloadData"]
 - !private ["CSo8NSObject", "resume"]
@@ -568,14 +608,18 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo16NSObjectProtocol", "descriptLabel"]
+- !private ["PSo16NSObjectProtocol", "destinationViewController"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "indexPathForCell"]
 - ["PSo16NSObjectProtocol", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "instaImageView"]
 - !private ["PSo16NSObjectProtocol", "likesLabel"]
 - !private ["PSo16NSObjectProtocol", "mainQueue"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
+- !private ["PSo16NSObjectProtocol", "passedPhoto"]
 - ["PSo16NSObjectProtocol", "pictures"]
+- ["PSo16NSObjectProtocol", "prepareForSegue"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
 - !private ["PSo16NSObjectProtocol", "resume"]
@@ -620,6 +664,7 @@ depends-member:
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "init"]
+- !private ["C15Instagram_Clone27PhotosDetailsViewController", "passedPhoto"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["PSs30RangeReplaceableCollectionType", "Generator"]
@@ -655,6 +700,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "descriptLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "indexPathForCell"]
 - !private ["PSo29UIAccessibilityIdentification", "instaImageView"]
 - !private ["PSo29UIAccessibilityIdentification", "likesLabel"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
@@ -666,6 +712,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "delegate"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo12UIAppearance", "descriptLabel"]
+- !private ["PSo12UIAppearance", "indexPathForCell"]
 - !private ["PSo12UIAppearance", "instaImageView"]
 - !private ["PSo12UIAppearance", "likesLabel"]
 - !private ["PSo12UIAppearance", "reloadData"]
@@ -684,12 +731,15 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "descriptLabel"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "indexPathForCell"]
 - ["PSo21UIAppearanceContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "instaImageView"]
 - !private ["PSo21UIAppearanceContainer", "likesLabel"]
 - ["PSo21UIAppearanceContainer", "numberOfSectionsInTableView"]
+- !private ["PSo21UIAppearanceContainer", "passedPhoto"]
 - ["PSo21UIAppearanceContainer", "pictures"]
+- ["PSo21UIAppearanceContainer", "prepareForSegue"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
@@ -723,7 +773,9 @@ depends-member:
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "numberOfSectionsInTableView"]
+- !private ["PSo18UIContentContainer", "passedPhoto"]
 - ["PSo18UIContentContainer", "pictures"]
+- ["PSo18UIContentContainer", "prepareForSegue"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
@@ -746,6 +798,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "delegate"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo17UICoordinateSpace", "descriptLabel"]
+- !private ["PSo17UICoordinateSpace", "indexPathForCell"]
 - !private ["PSo17UICoordinateSpace", "instaImageView"]
 - !private ["PSo17UICoordinateSpace", "likesLabel"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
@@ -757,6 +810,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "delegate"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo13UIDynamicItem", "descriptLabel"]
+- !private ["PSo13UIDynamicItem", "indexPathForCell"]
 - !private ["PSo13UIDynamicItem", "instaImageView"]
 - !private ["PSo13UIDynamicItem", "likesLabel"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
@@ -775,12 +829,15 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "descriptLabel"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "indexPathForCell"]
 - ["PSo18UIFocusEnvironment", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "instaImageView"]
 - !private ["PSo18UIFocusEnvironment", "likesLabel"]
 - ["PSo18UIFocusEnvironment", "numberOfSectionsInTableView"]
+- !private ["PSo18UIFocusEnvironment", "passedPhoto"]
 - ["PSo18UIFocusEnvironment", "pictures"]
+- ["PSo18UIFocusEnvironment", "prepareForSegue"]
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
@@ -811,6 +868,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "userLabel"]
 - !private ["CSo11UIImageView", "setImageWithURL"]
 - !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "AnyObject"]
 - !private ["CSo11UIResponder", "InstaCell"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSDictionary"]
@@ -823,7 +881,9 @@ depends-member:
 - !private ["CSo11UIResponder", "NSURLSession"]
 - !private ["CSo11UIResponder", "NSURLSessionConfiguration"]
 - !private ["CSo11UIResponder", "NSURLSessionDataTask"]
+- !private ["CSo11UIResponder", "PhotosDetailsViewController"]
 - !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
 - !private ["CSo11UIResponder", "dataSource"]
@@ -831,12 +891,15 @@ depends-member:
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo11UIResponder", "descriptLabel"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "indexPathForCell"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "instaImageView"]
 - !private ["CSo11UIResponder", "likesLabel"]
 - ["CSo11UIResponder", "numberOfSectionsInTableView"]
+- !private ["CSo11UIResponder", "passedPhoto"]
 - ["CSo11UIResponder", "pictures"]
+- ["CSo11UIResponder", "prepareForSegue"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "reloadData"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
@@ -862,6 +925,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "dataSource"]
 - !private ["CSo12UIScrollView", "delegate"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo12UIScrollView", "indexPathForCell"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["PSo20UIScrollViewDelegate", "NSJSONSerialization"]
 - !private ["PSo20UIScrollViewDelegate", "NSOperationQueue"]
@@ -899,7 +963,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "numberOfSectionsInTableView"]
+- !private ["PSo16UIStateRestoring", "passedPhoto"]
 - ["PSo16UIStateRestoring", "pictures"]
+- ["PSo16UIStateRestoring", "prepareForSegue"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
@@ -918,9 +984,11 @@ depends-member:
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewForZoomingInScrollView"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["CSo17UIStoryboardSegue", "destinationViewController"]
 - !private ["CSo11UITableView", "dataSource"]
 - !private ["CSo11UITableView", "delegate"]
 - !private ["CSo11UITableView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo11UITableView", "indexPathForCell"]
 - !private ["CSo11UITableView", "reloadData"]
 - !private ["CSo15UITableViewCell", "deinit"]
 - !private ["CSo15UITableViewCell", "descriptLabel"]
@@ -991,12 +1059,15 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo18UITraitEnvironment", "descriptLabel"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "indexPathForCell"]
 - ["PSo18UITraitEnvironment", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "instaImageView"]
 - !private ["PSo18UITraitEnvironment", "likesLabel"]
 - ["PSo18UITraitEnvironment", "numberOfSectionsInTableView"]
+- !private ["PSo18UITraitEnvironment", "passedPhoto"]
 - ["PSo18UITraitEnvironment", "pictures"]
+- ["PSo18UITraitEnvironment", "prepareForSegue"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
@@ -1024,6 +1095,7 @@ depends-member:
 - !private ["CSo6UIView", "delegate"]
 - !private ["CSo6UIView", "dequeueReusableCellWithIdentifier"]
 - !private ["CSo6UIView", "descriptLabel"]
+- !private ["CSo6UIView", "indexPathForCell"]
 - !private ["CSo6UIView", "instaImageView"]
 - !private ["CSo6UIView", "likesLabel"]
 - !private ["CSo6UIView", "reloadData"]
@@ -1031,6 +1103,7 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "userImage"]
 - !private ["CSo6UIView", "userLabel"]
+- ["CSo16UIViewController", "AnyObject"]
 - !private ["CSo16UIViewController", "InstaCell"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSDictionary"]
@@ -1043,14 +1116,19 @@ depends-member:
 - !private ["CSo16UIViewController", "NSURLSession"]
 - !private ["CSo16UIViewController", "NSURLSessionConfiguration"]
 - !private ["CSo16UIViewController", "NSURLSessionDataTask"]
+- !private ["CSo16UIViewController", "PhotosDetailsViewController"]
 - !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
+- !private ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "numberOfSectionsInTableView"]
+- !private ["CSo16UIViewController", "passedPhoto"]
 - ["CSo16UIViewController", "pictures"]
+- ["CSo16UIViewController", "prepareForSegue"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
@@ -1125,6 +1203,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "delegate"]
 - !private ["PSs12_Reflectable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs12_Reflectable", "descriptLabel"]
+- !private ["PSs12_Reflectable", "indexPathForCell"]
 - !private ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "instaImageView"]
 - !private ["PSs12_Reflectable", "likesLabel"]
@@ -1203,6 +1282,7 @@ depends-nominal:
 - !private "PSs13OptionSetType"
 - "Sq"
 - !private "PSs16OutputStreamType"
+- !private "C15Instagram_Clone27PhotosDetailsViewController"
 - !private "PSs21RandomAccessIndexType"
 - !private "PSs30RangeReplaceableCollectionType"
 - !private "PSs16RawRepresentable"
@@ -1230,6 +1310,7 @@ depends-nominal:
 - !private "CSo12UIScrollView"
 - "PSo20UIScrollViewDelegate"
 - "PSo16UIStateRestoring"
+- !private "CSo17UIStoryboardSegue"
 - !private "CSo11UITableView"
 - !private "CSo15UITableViewCell"
 - "PSo21UITableViewDataSource"
@@ -1296,4 +1377,4 @@ depends-external:
 - "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/Takashi/Documents/Instagram-Clone/DerivedData/Instagram-Clone/Build/Products/Debug-iphoneos/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "a2a309c7c216b5c42ae1dce020057a67"
+interface-hash: "06ca5d87d6578a748fff10d5cafca19d"

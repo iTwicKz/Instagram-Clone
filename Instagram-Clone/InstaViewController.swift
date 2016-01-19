@@ -130,5 +130,21 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var vc = segue.destinationViewController as! PhotosDetailsViewController
+        
+        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        
+        
+        let passPhoto = pictures![indexPath!.row]
+        
+        vc.passedPhoto = passPhoto
+        
+        
+        //         Get the new view controller using segue.destinationViewController.
+        //         Pass the selected object to the new view controller.
+    }
 
 }

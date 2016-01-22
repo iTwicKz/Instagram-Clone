@@ -98,10 +98,14 @@ class InstaViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.isMoreDataLoading = false
                 
                 // Update data source with latest data
+
                 self.networkRequest()
                 self.tableView.reloadData()
+                scrollView.contentOffset.y = 0;
+
                 
             }
+            
             
         }
     }
